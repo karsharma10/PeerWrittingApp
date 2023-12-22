@@ -1,4 +1,4 @@
-# PeerWrittingApp
+# PeerWrittingApp using React, Socket.io, MongoDB(NoSQL)
 
 ## Details:
 Created a writing application that allows more than two users with the same link to edit a particular document in real-time and also save changes automatically to a NoSQL database. It automatically creates a new document when you log onto the server with a unique ID. That link can be sent to others to view the same document and edit it as well. Since it is saved to a database, all the changes are saved even when the page refreshes. 
