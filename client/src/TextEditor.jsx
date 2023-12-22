@@ -15,7 +15,20 @@ export default function TextEditor() {
     },[])
 
 
-    
+    //need to take care of when there is a text change on the server:
+    useEffect(() => {
+
+        if(socket == null || quil == null) return //if they are empty we don't want to run anything
+        const handler = (delta, oldDelta, source) =>{
+            if(source !== 'user') return //we don't want to send changes that didn't come from a user
+            socket.emit("send-changes",delta)
+        }
+
+        quil.on("text-change", handler)
+        return()=>{
+            quil.off("text-change", handler)
+        }
+    }, [socket, quil]);
 
 
     const wrapperRef = useCallback(wrapper => {
