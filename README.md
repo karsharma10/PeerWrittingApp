@@ -17,5 +17,9 @@ Backend:
 - cors (to connect client and server)
 
 
-https://github.com/karsharma10/PeerWrittingApp/assets/64170090/2da1350f-33bb-4577-aec1-c83c9fabe601
+
+
+## Demonstration of the Application:
+
+https://github.com/karsharma10/PeerWrittingApp/assets/64170090/8ebbf5c0-bf6c-406b-97ae-0843f52f3ded
 
