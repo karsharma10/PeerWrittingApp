@@ -24,3 +24,13 @@ Backend:
 
 https://github.com/karsharma10/PeerWrittingApp/assets/64170090/8ebbf5c0-bf6c-406b-97ae-0843f52f3ded
 
+
+## How to run:
+- Firstly, you need to get the client side to run. To do so:
+  - cd client
+  - npm start
+- Secondly, you need to get the server side to run. Please make sure to have MongoDB on your computer. Then:
+  -  cd server
+  -  npm run devStart
+ 
+
