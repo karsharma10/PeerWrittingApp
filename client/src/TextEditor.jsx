@@ -3,6 +3,8 @@ import Quill from "quill";
 import "quill/dist/quill.snow.css" //import quil style sheet
 import {io} from "socket.io-client";
 import {useParams} from "react-router-dom";
+
+const SAVE_INTERVAL = 2000
 export default function TextEditor() {
     const [socket, setSocket] = useState()
     const [quil, setQuil] = useState()
@@ -62,7 +64,19 @@ export default function TextEditor() {
 
     },[socket, quil, documentId])
 
+    useEffect(()=>{
+        if(socket == null || quil == null) return //if its empty we don't want to do anything
 
+        const interval = setInterval(()=>{
+            socket.emit('save-document', quil.getContents())
+        }, SAVE_INTERVAL)
+
+        return()=>{
+            clearInterval(interval)
+        }
+
+
+    },[socket,quil])
     const wrapperRef = useCallback(wrapper => {
         if (wrapper == null) return
         wrapper.innerHTML = ""
