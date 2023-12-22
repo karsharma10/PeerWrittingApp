@@ -8,6 +8,7 @@ This project utilizes a server and client feature, where all the backend code is
 ## Tech Stack:
 Fronend:
  - Reactjs
+ - Quill
 
 Backend:
 - Nodejs
