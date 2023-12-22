@@ -15,6 +15,7 @@ Backend:
 - Express
 - Socket.io
 - MongoDB (NoSQL Database)
+- Mongoose
 - cors (to connect client and server)
 
 
