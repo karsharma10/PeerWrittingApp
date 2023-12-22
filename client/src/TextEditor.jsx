@@ -31,6 +31,22 @@ export default function TextEditor() {
     }, [socket, quil]);
 
 
+    //now we need to take care of the receiving end
+
+    useEffect(() => {
+
+        if(socket == null || quil == null) return //if they are empty we don't want to run anything
+        const handler = (delta) =>{
+           quil.updateContents(delta)
+        }
+
+        socket.on("receive-changes", handler)
+        return()=>{
+            socket.off("receive-changes", handler)
+        }
+    }, [socket, quil]);
+
+
     const wrapperRef = useCallback(wrapper => {
         if (wrapper == null) return
         wrapper.innerHTML = ""
