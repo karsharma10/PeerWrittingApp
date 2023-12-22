@@ -15,3 +15,7 @@ Backend:
 - Socket.io
 - MongoDB (NoSQL Database)
 - cors (to connect client and server)
+
+
+https://github.com/karsharma10/PeerWrittingApp/assets/64170090/2da1350f-33bb-4577-aec1-c83c9fabe601
+
